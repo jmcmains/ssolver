@@ -28,10 +28,6 @@ class Solver {
             }
         }
 
-        if (!$this->isSolved()) {
-
-        }
-
         return $this->hash;
     }
 
