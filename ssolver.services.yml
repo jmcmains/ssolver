@@ -1,0 +1,3 @@
+services:
+  ssolver.solver:
+    class: Drupal\ssolver\Services\Solver

@@ -1,0 +1,5 @@
+name: Sudoku Solver Module
+type: module
+core: '8.x'
+description: 'Solve any sudoku puzzle with php!'
+package: Games

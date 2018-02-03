@@ -1,0 +1,4 @@
+ssolver:
+  css:
+    module:
+      css/ssolver.module.css: {}

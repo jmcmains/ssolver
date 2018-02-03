@@ -1,0 +1,43 @@
+.ssolver-form .sudoku-cell {
+    width: 3em;
+    text-align: center;
+    padding:0;
+    margin:0;
+    border:1px solid #eee;
+    height: 3em;
+    font-size: large;
+}
+
+.ssolver-form .form-item {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.ssolver-form .sudoku-cell.row-2, .ssolver-form .sudoku-cell.row-5,.row-2, .row-5 {
+    border-bottom: 1px solid black;
+}
+
+.ssolver-form .sudoku-cell.col-2, .ssolver-form .sudoku-cell.col-5, .col-2, .col-5 {
+    border-right: 1px solid black;
+}
+
+.ssolver .x-large-text {
+    font-size: x-large;
+}
+
+.ssolver .x-small-text {
+    font-size: x-small;
+}
+
+.ssolver .red-text {
+    color:red;
+}
+
+.ssolver .light-gray-text {
+    color: #222222;
+}
+
+.ssolver .bold-text {
+    font-weight:bold;
+}

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function ssolver_theme() {
+    $variables = array(
+        'ssolver' => array(
+            'variables' => array(
+                'solved' => NULL,
+                'original' => NULL,
+            ),
+            'template' => 'ssolver',
+        ),
+    );
+    return $variables;
+}

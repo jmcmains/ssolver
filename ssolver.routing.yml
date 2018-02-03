@@ -1,0 +1,14 @@
+ssolver.content:
+  path: '/ssolver'
+  defaults:
+    _form: 'Drupal\ssolver\Form\SSolverForm'
+    _title: 'Enter a puzzle to be solved'
+    _subtitle: 'this is a subtitle'
+  requirements:
+    _permission: 'access content'
+ssolver.solve:
+  path: '/ssolver/solve'
+  defaults:
+    _controller: '\Drupal\ssolver\Controller\SSolverController::solve'
+  requirements:
+    _permission: 'access content'

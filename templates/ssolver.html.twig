@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Default theme implementation to print solved sudoku puzzles.
+ *
+ * Available variables:
+ *   - source_text
+ *
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="ssolver">
+    <h2>Original Puzzle</h2>
+    <table>
+        {% for i in 0..8 %}
+            <tr>
+                {% for j in 0..8 %}
+                    <td class="x-large-text row-{{ i }} col-{{ j }}">
+                        {{ original[i*9 + j] }}
+                    </td>
+                {% endfor %}
+            </tr>
+        {%  endfor %}
+    </table>
+
+    <h2>Solved Puzzle</h2>
+    <table>
+        {% for i in 0..8 %}
+            <tr>
+                {% for j in 0..8 %}
+                    {% if solved[i*9 + j]['value'] != original[i*9 + j] %}
+                        <td class="red-text bold-text x-large-text row-{{ i }} col-{{ j }}">
+                            {{ solved[i*9 + j]['value'] }}
+                        </td>
+                    {% else %}
+                        {% if solved[i*9 + j]['value'] matches '/^\\d+$/' %}
+                            <td class="x-large-text row-{{ i }} col-{{ j }}">
+                                {{ solved[i*9 + j]['value'] }}
+                            </td>
+                        {%  else %}
+                            <td class="x-small-text light-gray-text row-{{ i }} col-{{ j }}">
+                                {% for avail in solved[i*9 + j]['availableOptions'] %}
+                                    {{ avail }},
+                                {% endfor %}
+                            </td>
+                        {%  endif %}
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {%  endfor %}
+    </table>
+</div>
+
+<a href="{{ path('ssolver.content') }}">{{ 'Enter another puzzle!'|t }}</a>

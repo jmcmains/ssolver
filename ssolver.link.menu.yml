@@ -1,0 +1,6 @@
+ssolver.menu:
+  title: 'Soduku Solver'
+  description: 'Solve some pretty tough sudoku puzzles'
+  parent: system.admin_config_development
+  route_name: ssolver.content
+  weight: 100
