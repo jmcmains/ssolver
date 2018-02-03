@@ -6,7 +6,7 @@ To Use:
 2. go to `example.com/ssolver` 
 3. start entering puzzles, and have fun!
 
-##To do
+## To do
 - [ ] extract the solving steps into separate strategies
 - [ ] add test coverage
 - [ ] Implement guess and check method for more difficult puzzles
