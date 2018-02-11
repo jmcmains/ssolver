@@ -5,7 +5,6 @@ namespace Drupal\ssolver\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\ssolver\Services\Solver;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\Response;
 
 class SSolverController extends ControllerBase {
 
@@ -23,7 +22,8 @@ class SSolverController extends ControllerBase {
         $element['#solved'] = $solved;
         $element['#theme'] = 'ssolver';
         $element['#attached']['library'][] = 'ssolver/ssolver';
-        if ($this->solver->isSolved($solved)) {
+        $element['#lastMethod'] = $this->solver->maxStrategyTried();
+        if ($this->solver->isSolved()) {
             $element['#title'] = 'Solved!';
         } else {
             $element['#title'] = "Couldn't quite crack it!";

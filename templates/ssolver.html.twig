@@ -25,22 +25,23 @@
     </table>
 
     <h2>Solved Puzzle</h2>
+	Highest strategy tried: {{ lastMethod }}
     <table>
         {% for i in 0..8 %}
             <tr>
                 {% for j in 0..8 %}
-                    {% if solved[i*9 + j]['value'] != original[i*9 + j] %}
+                    {% if solved[i*9 + j].value != original[i*9 + j] %}
                         <td class="red-text bold-text x-large-text row-{{ i }} col-{{ j }}">
-                            {{ solved[i*9 + j]['value'] }}
+                            {{ solved[i*9 + j].value }}
                         </td>
                     {% else %}
-                        {% if solved[i*9 + j]['value'] matches '/^\\d+$/' %}
+                        {% if solved[i*9 + j].value matches '/^\\d+$/' %}
                             <td class="x-large-text row-{{ i }} col-{{ j }}">
-                                {{ solved[i*9 + j]['value'] }}
+                                {{ solved[i*9 + j].value }}
                             </td>
                         {%  else %}
                             <td class="x-small-text light-gray-text row-{{ i }} col-{{ j }}">
-                                {% for avail in solved[i*9 + j]['availableOptions'] %}
+                                {% for avail in solved[i*9 + j].availableOptions %}
                                     {{ avail }},
                                 {% endfor %}
                             </td>

@@ -9,6 +9,7 @@ function ssolver_theme() {
             'variables' => array(
                 'solved' => NULL,
                 'original' => NULL,
+                'lastMethod' => NULL,
             ),
             'template' => 'ssolver',
         ),
